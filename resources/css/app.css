@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Warna brand Negara Jaya Logistik (diambil dari desain Figma) */
+    --color-navy: #0f1d70;
+    --color-navy-light: #1b2a8f;
+    --color-brand: #1a5ba6;
+    --color-brand-light: #3b8fd4;
+    --color-accent: #38bdf8;
+    --color-gold: #e3a82c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sembunyikan scrollbar pada slider galeri */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
