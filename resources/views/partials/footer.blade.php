@@ -24,7 +24,7 @@
     $alamat = [
         [
             'title' => 'Head Office:',
-            'body'  => 'Pertokoan Jummpolan No. 9, Banjarbaru',
+            'body'  => 'Komp. Guntung Paring Indah Permai 1 No B. 16, Kel. Guntung Manggis, Kec. Landasan Ulin, Kota Banjarbaru',
             'href'  => 'https://maps.app.goo.gl/uu7XJcWeC9PmavWR9?g_st=aw',
         ],
         [
