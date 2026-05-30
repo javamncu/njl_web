@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Negara Jaya Logistik - Solusi Logistik Terpercaya')
+@section('title', __('Negara Jaya Logistik - Solusi Logistik Terpercaya'))
 
 @section('content')
 
@@ -30,31 +30,30 @@
         <div class="flex min-h-115 w-full items-center px-6 sm:h-full sm:min-h-0 sm:px-10 lg:px-16 xl:px-24">
             <div class="w-full min-w-0 max-w-lg">
                 <p class="text-base font-bold uppercase tracking-[0.18em] text-gold sm:text-lg">
-                    Fast, Safe &amp; Trusted
+                    {{ __('Fast, Safe & Trusted') }}
                 </p>
 
                 <h1 id="heroHeading"
                     class="mt-3 text-3xl font-extrabold uppercase leading-[0.95] text-shadow-lg transition-colors duration-500 sm:text-4xl sm:text-shadow-none lg:text-5xl">
-                    Logistics<br>Solution
+                    {!! str_replace(' ', '<br>', __('Logistics Solution')) !!}
                 </h1>
 
                 <p id="heroParagraph"
                    class="mt-4 max-w-md text-sm font-semibold leading-relaxed text-shadow-lg transition-colors duration-500 sm:text-base sm:text-shadow-none">
-                    Solusi pengiriman barang domestik dan internasional yang cepat, aman,
-                    dan terpercaya untuk mendukung bisnis Anda.
+                    {{ __('Solusi pengiriman barang domestik dan internasional yang cepat, aman, dan terpercaya untuk mendukung bisnis Anda.') }}
                 </p>
 
                 <div class="mt-6 flex flex-wrap gap-3">
                     <a href="#tentang"
                        class="inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white shadow-lg transition hover:bg-navy-light sm:text-sm">
-                        Tentang Kami
+                        {{ __('Tentang Kami') }}
                         <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                     </a>
                     <a href="#layanan"
                        class="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-navy shadow-lg ring-1 ring-slate-200 transition hover:bg-slate-50 sm:text-sm">
-                        Layanan Kami
+                        {{ __('Layanan Kami') }}
                         <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
@@ -66,7 +65,7 @@
         {{-- Tombol prev (di bawah tombol pada mobile, di tengah pada md+) --}}
         <button id="heroPrev" type="button"
                 class="absolute bottom-4 left-1/4 z-20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-white/80 text-navy shadow-md backdrop-blur transition hover:bg-white md:top-1/2 md:bottom-auto md:left-5 md:h-12 md:w-12 md:-translate-y-1/2"
-                aria-label="Slide sebelumnya">
+                aria-label="{{ __('Slide sebelumnya') }}">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
@@ -75,7 +74,7 @@
         {{-- Tombol next (di bawah tombol pada mobile, di tengah pada md+) --}}
         <button id="heroNext" type="button"
                 class="absolute right-1/4 bottom-4 z-20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-white/80 text-navy shadow-md backdrop-blur transition hover:bg-white md:top-1/2 md:right-5 md:bottom-auto md:h-12 md:w-12 md:-translate-y-1/2"
-                aria-label="Slide berikutnya">
+                aria-label="{{ __('Slide berikutnya') }}">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
             </svg>
@@ -195,15 +194,13 @@
                 {{-- Teks --}}
                 <div>
                     <p class="text-xl font-bold uppercase tracking-wide text-gold sm:text-2xl">
-                        Tentang Kami
+                        {{ __('Tentang Kami') }}
                     </p>
                     <h2 class="mt-3 text-2xl font-bold leading-tight text-gold sm:text-3xl lg:text-4xl">
-                        Solusi Logistik Terpercaya<br>untuk Bisnis Anda
+                        {{ __('Solusi Logistik Terpercaya') }}<br>{{ __('untuk Bisnis Anda') }}
                     </h2>
                     <p class="mt-5 max-w-2xl text-lg leading-relaxed text-navy sm:text-xl">
-                        Negara Jaya Logistik adalah perusahaan yang bergerak di bidang jasa pengiriman
-                        dan distribusi barang domestik maupun internasional dengan komitmen memberikan
-                        pelayanan terbaik, cepat, aman, dan terpercaya.
+                        {{ __('Negara Jaya Logistik adalah perusahaan yang bergerak di bidang jasa pengiriman dan distribusi barang domestik maupun internasional dengan komitmen memberikan pelayanan terbaik, cepat, aman, dan terpercaya.') }}
                     </p>
                 </div>
             </div>
@@ -219,10 +216,10 @@
             {{-- Header --}}
             <div class="text-center">
                 <p class="text-xl font-bold uppercase tracking-wide text-gold sm:text-2xl">
-                    Layanan Kami
+                    {{ __('Layanan Kami') }}
                 </p>
                 <h2 class="mt-2 text-2xl font-bold text-navy sm:text-3xl lg:text-4xl">
-                    Layanan Logistik Terlengkap
+                    {{ __('Layanan Logistik Terlengkap') }}
                 </h2>
             </div>
 
@@ -232,10 +229,10 @@
                     <button type="button"
                             class="cursor-pointer text-left transition hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
                             data-service-trigger
-                            data-service-name="{{ $service['name'] }}"
+                            data-service-name="{{ __($service['name']) }}"
                             data-service-photos='@json($service['photos'])'>
                         <img src="{{ asset('icon_layanan/' . $service['icon']) }}"
-                             alt="{{ $service['name'] }}"
+                             alt="{{ __($service['name']) }}"
                              class="w-full">
                     </button>
                 @endforeach
@@ -257,10 +254,10 @@
             {{-- Header --}}
             <div class="text-center">
                 <p class="text-xl font-bold uppercase tracking-wide text-gold sm:text-2xl">
-                    Galeri Kami
+                    {{ __('Galeri Kami') }}
                 </p>
                 <h2 class="mt-2 text-2xl font-bold text-navy sm:text-3xl lg:text-4xl">
-                    Dokumentasi Pengerjaan
+                    {{ __('Dokumentasi Pengerjaan') }}
                 </h2>
             </div>
         </div>
@@ -311,17 +308,17 @@
     <section id="kenapa" class="border-b-2 border-white bg-navy py-12 lg:py-16">
         <div class="px-6 sm:px-10 lg:px-16 xl:px-24">
             <h2 class="text-center text-2xl font-extrabold uppercase tracking-wide text-white sm:text-3xl lg:text-4xl">
-                Kenapa Memilih Kami
+                {{ __('Kenapa Memilih Kami') }}
             </h2>
 
             <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-5 lg:gap-4">
                 @foreach ($features as $feature)
                     <div class="flex items-center gap-3">
                         <img src="{{ asset('icon_njl_kenapa_memilih_kami/' . $feature['icon']) }}"
-                             alt="{{ $feature['label'] }}"
+                             alt="{{ __($feature['label']) }}"
                              class="h-14 w-14 shrink-0 sm:h-16 sm:w-16">
                         <p class="text-sm font-bold uppercase leading-tight text-white sm:text-base">
-                            {{ $feature['label'] }}
+                            {{ __($feature['label']) }}
                         </p>
                     </div>
                 @endforeach
@@ -342,7 +339,7 @@
             {{-- Tombol close --}}
             <button type="button"
                     class="absolute top-4 right-4 z-20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-navy text-white shadow-lg transition hover:bg-navy-light focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-                    data-modal-close aria-label="Tutup">
+                    data-modal-close aria-label="{{ __('Tutup') }}">
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -351,7 +348,7 @@
             {{-- Header --}}
             <div class="border-b border-slate-200 bg-slate-50 px-6 py-5 sm:px-8">
                 <p class="text-xs font-bold uppercase tracking-[0.18em] text-gold sm:text-sm">
-                    Dokumentasi Layanan
+                    {{ __('Dokumentasi Layanan') }}
                 </p>
                 <h3 id="serviceModalTitle" class="mt-1 pr-10 text-xl font-bold text-navy sm:text-2xl"></h3>
             </div>
@@ -360,7 +357,7 @@
             <div class="relative bg-slate-50 px-4 py-6 sm:px-12 sm:py-8">
                 {{-- Empty state --}}
                 <p id="serviceModalEmpty" class="hidden py-16 text-center text-sm text-slate-500">
-                    Foto segera hadir.
+                    {{ __('Foto segera hadir.') }}
                 </p>
 
                 {{-- Foto utama --}}
@@ -372,7 +369,7 @@
                 {{-- Tombol prev --}}
                 <button id="serviceModalPrev" type="button"
                         class="absolute top-1/2 left-2 z-10 flex h-11 w-11 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white text-navy shadow-lg ring-1 ring-slate-200 transition hover:bg-navy hover:text-white sm:left-4"
-                        aria-label="Foto sebelumnya">
+                        aria-label="{{ __('Foto sebelumnya') }}">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
@@ -381,7 +378,7 @@
                 {{-- Tombol next --}}
                 <button id="serviceModalNext" type="button"
                         class="absolute top-1/2 right-2 z-10 flex h-11 w-11 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white text-navy shadow-lg ring-1 ring-slate-200 transition hover:bg-navy hover:text-white sm:right-4"
-                        aria-label="Foto berikutnya">
+                        aria-label="{{ __('Foto berikutnya') }}">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                     </svg>

@@ -65,28 +65,27 @@
                     </div>
                 </div>
                 <p class="mt-5 max-w-xs text-sm leading-relaxed text-slate-300">
-                    Mitra logistik terpercaya yang siap mendukung kelancaran bisnis Anda
-                    dengan layanan terbaik.
+                    {{ __('Mitra logistik terpercaya yang siap mendukung kelancaran bisnis Anda dengan layanan terbaik.') }}
                 </p>
             </div>
 
             {{-- 2. Layanan --}}
             <div class="lg:col-span-2">
-                <h4 class="text-base font-bold uppercase tracking-wide text-white">Layanan</h4>
+                <h4 class="text-base font-bold uppercase tracking-wide text-white">{{ __('Layanan') }}</h4>
                 <ul class="mt-4 space-y-1.5 text-sm">
                     @foreach ($layanan as $item)
-                        <li>{{ $item }}</li>
+                        <li>{{ __($item) }}</li>
                     @endforeach
                 </ul>
             </div>
 
             {{-- 3. Informasi --}}
             <div class="lg:col-span-2">
-                <h4 class="text-base font-bold uppercase tracking-wide text-white">Informasi</h4>
+                <h4 class="text-base font-bold uppercase tracking-wide text-white">{{ __('Informasi') }}</h4>
                 <ul class="mt-4 space-y-1.5 text-sm">
                     @foreach ($informasi as $item)
                         <li>
-                            <a href="{{ $item['href'] }}" class="transition hover:text-accent">{{ $item['label'] }}</a>
+                            <a href="{{ $item['href'] }}" class="transition hover:text-accent">{{ __($item['label']) }}</a>
                         </li>
                     @endforeach
                 </ul>
@@ -94,7 +93,7 @@
 
             {{-- 4. Kontak Kami --}}
             <div id="kontak" class="scroll-mt-24 lg:col-span-2">
-                <h4 class="text-base font-bold uppercase tracking-wide text-white">Kontak Kami</h4>
+                <h4 class="text-base font-bold uppercase tracking-wide text-white">{{ __('Kontak Kami') }}</h4>
                 <ul class="mt-4 space-y-2 text-sm">
                     @foreach ($kontak as $item)
                         <li>
@@ -117,7 +116,7 @@
 
             {{-- 5. Alamat Kami --}}
             <div class="lg:col-span-3">
-                <h4 class="text-base font-bold uppercase tracking-wide text-white">Alamat Kami</h4>
+                <h4 class="text-base font-bold uppercase tracking-wide text-white">{{ __('Alamat Kami') }}</h4>
                 <ul class="mt-4 space-y-4 text-sm">
                     @foreach ($alamat as $a)
                         <li>
@@ -128,8 +127,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                                 </svg>
                                 <span>
-                                    <strong class="block font-bold text-white">{{ $a['title'] }}</strong>
-                                    {{ $a['body'] }}
+                                    <strong class="block font-bold text-white">{{ __($a['title']) }}</strong>
+                                    {{ __($a['body']) }}
                                 </span>
                             </a>
                         </li>
@@ -143,7 +142,7 @@
     <div class="border-t border-white/15">
         <div class="flex flex-col items-center justify-between gap-4 px-6 py-5 sm:px-10 md:flex-row lg:px-16 xl:px-24">
             <p class="text-sm font-bold text-white">
-                {{ date('Y') }} Negara Jaya Logistik All Right Reserved.
+                {{ date('Y') }} {{ __('Negara Jaya Logistik All Right Reserved.') }}
             </p>
 
             <div class="flex items-center gap-3">

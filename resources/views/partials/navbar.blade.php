@@ -6,6 +6,7 @@
         ['label' => 'Tentang Kami', 'href' => '#tentang'],
         ['label' => 'Kontak', 'href' => '#kontak'],
     ];
+    $currentLocale = app()->getLocale();
 @endphp
 
 <header id="navbar" class="sticky top-0 z-50 bg-white shadow-sm">
@@ -17,10 +18,10 @@
                  class="h-10 w-auto shrink-0 sm:h-12">
             <span class="leading-tight">
                 <span class="block text-sm font-extrabold uppercase tracking-tight text-navy sm:text-base lg:text-xl">
-                    CV. Negara Jaya Logistik
+                    {{ __('CV. Negara Jaya Logistik') }}
                 </span>
                 <span class="block text-[9px] font-semibold uppercase tracking-[0.25em] text-navy sm:text-[11px]">
-                    Global Delivery Partner
+                    {{ __('Global Delivery Partner') }}
                 </span>
             </span>
         </a>
@@ -30,7 +31,7 @@
             @foreach ($navLinks as $link)
                 <a href="{{ $link['href'] }}"
                    class="text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:text-brand">
-                    {{ $link['label'] }}
+                    {{ __($link['label']) }}
                 </a>
             @endforeach
         </div>
@@ -38,13 +39,27 @@
         {{-- Tombol CTA --}}
         <a href="#kontak"
            class="hidden rounded-lg bg-navy px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-navy-light lg:inline-flex">
-            Hubungi Kami
+            {{ __('Hubungi Kami') }}
         </a>
+
+        {{-- Language switcher (selalu tampil, pojok kanan) --}}
+        <div class="ml-auto flex items-center gap-1 rounded-full bg-slate-100 p-1 lg:ml-0">
+            <a href="{{ route('lang.switch', 'id') }}"
+               class="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide transition
+                      {{ $currentLocale === 'id' ? 'bg-navy text-white shadow' : 'text-navy hover:bg-white' }}">
+                ID
+            </a>
+            <a href="{{ route('lang.switch', 'en') }}"
+               class="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide transition
+                      {{ $currentLocale === 'en' ? 'bg-navy text-white shadow' : 'text-navy hover:bg-white' }}">
+                EN
+            </a>
+        </div>
 
         {{-- Tombol menu mobile --}}
         <button id="menu-toggle" type="button"
-                class="ml-auto inline-flex items-center justify-center rounded-md p-2 text-navy lg:hidden"
-                aria-label="Buka menu" aria-expanded="false">
+                class="inline-flex items-center justify-center rounded-md p-2 text-navy lg:hidden"
+                aria-label="{{ __('Buka menu') }}" aria-expanded="false">
             <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -57,12 +72,12 @@
             @foreach ($navLinks as $link)
                 <a href="{{ $link['href'] }}"
                    class="block rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wide text-navy hover:bg-slate-50 hover:text-brand">
-                    {{ $link['label'] }}
+                    {{ __($link['label']) }}
                 </a>
             @endforeach
             <a href="#kontak"
                class="mt-2 block rounded-lg bg-navy px-3 py-2.5 text-center text-sm font-semibold uppercase tracking-wide text-white">
-                Hubungi Kami
+                {{ __('Hubungi Kami') }}
             </a>
         </div>
     </div>
