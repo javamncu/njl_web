@@ -17,8 +17,8 @@
     $kontak = [
         ['type' => 'phone', 'label' => '0811 5017 265 (Rory)',   'href' => 'tel:+628115017265'],
         ['type' => 'phone', 'label' => '0823 5193 1454 (Riski)', 'href' => 'tel:+6282351931454'],
-        ['type' => 'mail',  'label' => 'rorynegara@njlog.com',   'href' => 'mailto:rorynegara@njlog.com'],
-        ['type' => 'mail',  'label' => 'anggariski79@njlog.com', 'href' => 'mailto:anggariski79@njlog.com'],
+        ['type' => 'mail',  'label' => 'rory.negara@negarajayalogistik.com',  'href' => 'mailto:rory.negara@negarajayalogistik.com'],
+        ['type' => 'mail',  'label' => 'angga.riski@negarajayalogistik.com',  'href' => 'mailto:angga.riski@negarajayalogistik.com'],
     ];
 
     $alamat = [
